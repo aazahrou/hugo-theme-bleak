@@ -1,0 +1,62 @@
+---
+title: Healthy Recipes For Weight Loss Challenge
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: "/tag/"
+  values:
+    sitemap: false
+markdown: kramdown
+highlighter: rouge
+paginate: 12
+language: en-us
+baseurl: "/"
+url: https://wwsrecipes.com
+name: wwsrecipes
+description: You can not be in good shape and healthy until you start eating healthy
+  recipes. Get more of it inside !
+cover: assets/images/blog-cover.jpg
+logo: assets/images/logo.svg
+icon: assets/images/icon.svg
+logo_dark: assets/images/favicon.svg
+favicon: assets/images/favicon.ico
+production_url: false
+source_url: false
+incremental: true
+navigation: true
+subscribers: true
+twitter: wwsrecipes
+facebook: wwsrecipes
+pinterest: wwsrecipes
+instagram: wwsrecipes
+disqus: true
+disqus_shortname: wwsrecipes
+gtm_id: GTM-TX36HZ
+permalink: "/:title/"
+plugins:
+- jekyll-paginate
+- jekyll-feed
+- jekyll-sitemap
+- jekyll-cloudinary
+- jekyll-include-cache
+exclude:
+- README.md
+- Rakefile
+- Gemfile
+- Gemfile.lock
+- changelog.md
+- "*.Rmd"
+- vendor
+- ".travis.yml"
+- node_modules
+feed:
+  path: feed.xml
+include:
+- _headers

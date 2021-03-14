@@ -1,0 +1,42 @@
+---
+layout: default-for-lp
+current: post
+class: post-template
+disqus: false
+---
+
+{% include dfp-head-tag.html %}
+{% include sharethis.html %}
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full {{ page.subclass }} {% unless page.cover %}no-image{% endunless %}">
+            <header class="post-full-header">
+                {% include fatdecimator-lp01-atf.html %}
+                <h1 class="post-full-title">{{ page.title }}</h1>
+            </header>
+
+            {% if page.cover %}
+            <figure class="post-full-image" style="background-image: url({{page.cloudinary}})">
+            </figure>
+            {% endif %}
+            
+            <section class="post-full-content">
+                {% include fatdecimator-lp01-btf.html %}
+                <div class="kg-card-markdown">
+                    {{ content }}
+                    <h2>I- Ingredients for {{ page.recipe.servings }}</h2>
+                        {{ page.recipe.ingredients_markdown | markdownify }}
+                {% include amazon-bounty.html %}
+                    <h2>II- Directions</h2>
+                        {{ page.recipe.directions_markdown | markdownify }}
+                {% include dfp-midpost.html %}
+                    <h2>III- Nutrition facts per {{ page.recipe.serving_size }}</h2>
+                        {{ page.recipe.nutritions_markdown | markdownify }}
+                </div>
+                <div class="sharethis-inline-reaction-buttons"></div>
+                <div class="sharethis-inline-share-buttons"></div>
+            </section>
+        </article>
+    </div>
+</main>

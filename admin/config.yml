@@ -1,0 +1,95 @@
+# config.yml
+
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+local_backend: true
+media_folder: "assets/images"
+publish_mode: editorial_workflow
+collections:
+    - name: "template-a"
+      label: "Recipes - Template A"
+      folder: "_posts/"
+      create: true
+      filter: {field: "layout", value: "post-A"}
+      slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+      editor:
+        preview: true
+      fields:
+        - { label: "Class", name: "class", widget: "hidden", default: "post-template" }
+        - { label: "SubClass", name: "subclass", widget: "hidden", default: "post" }
+        - { label: "Layout", name: "layout", widget: "hidden", default: "post-A" }
+        - { label: "Tags", name: "tags", widget: "list", default: ["untagged"] }
+        - { label: "Title", name: "title", widget: "string" }
+        - { label: "Slug", name: "slug", widget: "string" }
+        - { label: "Description", name: "description", widget: "text" }
+        - { label: "Publish Date", name: "date", widget: "datetime" }
+        - { label: "Cover Image", name: "cover", widget: "image", default: "/assets/images/cover-default.png"}
+        - { label: "Navigation", name: "navigation", widget: "boolean", default: "true" }
+        - { label: "Recipe Body", name: "body", widget: "markdown" }
+  
+
+    - label: "Recipes - Template B"
+      name: "template-b"
+      folder: "_posts/"
+      create: true
+      filter: {field: "layout", value: "post-B"}
+      slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+      editor:
+        preview: true
+      fields:
+        - { label: "Class", name: "class", widget: "hidden", default: "post-template" }
+        - { label: "SubClass", name: "subclass", widget: "hidden", default: "post" }
+        - { label: "Layout", name: "layout", widget: "hidden", default: "post-B" }
+        - { label: "Tags", name: "tags", widget: "list", default: ["untagged"] }
+        - { label: "Title", name: "title", widget: "string" }
+        - { label: "Description", name: "description", widget: "text", default: "page.ingredients_markdown" }
+        - { label: "Publish Date", name: "date", widget: "datetime" }
+        - { label: "Cover Image", name: "cover", widget: "image", default: "/assets/images/cover-default.png"}
+        - { label: "Cloudinary Cover", name: "cloudinary", widget: "string"}
+        - { label: "Navigation", name: "navigation", widget: "boolean", default: "true" }
+        - label: "Recipe"
+          name: "recipe"
+          widget: "object"
+          collapsed: true
+          fields:
+            - { label: "Servings", name: "servings", widget: "string"}
+            - { label: "Serving Size", name: "serving_size", widget: "string" }
+            - { label: "Prep Time", name: "prep", widget: "string" }
+            - { label: "Cook Time", name: "cook", widget: "string" }
+            - { label: "Recipe Ingredients", name: "ingredients_markdown", widget: "markdown" }
+            - { label: "Recipe Directions", name: "directions_markdown", widget: "markdown" }
+            - { label: "Recipe Nutritions", name: "nutritions_markdown", widget: "markdown" }
+  
+
+    - name: "template-o"
+      label: "Recipes - Template O"
+      folder: "_posts/"
+      create: true
+      filter: {field: "layout", value: "post-O"}
+      slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+      editor:
+        preview: true
+      fields:
+        - { label: "Class", name: "class", widget: "hidden", default: "post-template" }
+        - { label: "SubClass", name: "subclass", widget: "hidden", default: "post" }
+        - { label: "Layout", name: "layout", widget: "hidden", default: "post-O" }
+        - { label: "Tags", name: "tags", widget: "list", default: ["untagged"] }
+        - { label: "Title", name: "title", widget: "string" }
+        - { label: "Description", name: "description", widget: "text", default: "page.ingredients_markdown" }
+        - { label: "Publish Date", name: "date", widget: "datetime" }
+        - { label: "Cover Image", name: "cover", widget: "image", default: "/assets/images/cover-default.png"}
+        - { label: "Cloudinary Cover", name: "cloudinary", widget: "string"}
+        - { label: "Navigation", name: "navigation", widget: "boolean", default: "true" }
+        - label: "Recipe"
+          name: "recipe"
+          widget: "object"
+          collapsed: true
+          fields:
+            - { label: "Servings", name: "servings", widget: "string"}
+            - { label: "Serving Size", name: "serving_size", widget: "string" }
+            - { label: "Prep Time", name: "prep", widget: "string" }
+            - { label: "Cook Time", name: "cook", widget: "string" }
+            - { label: "Recipe Ingredients", name: "ingredients_markdown", widget: "markdown" }
+            - { label: "Recipe Directions", name: "directions_markdown", widget: "markdown" }
+            - { label: "Recipe Nutritions", name: "nutritions_markdown", widget: "markdown" }

@@ -1,0 +1,22 @@
+/*
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: public, max-age=31536000
+
+/*.jpg
+  Cache-Control: max-age=31536000, public
+/*.svg
+  Cache-Control: max-age=31536000, public
+/*.ico
+  Cache-Control: max-age=31536000, public
+/*.png
+  Cache-Control: max-age=31536000, public
+/*.css
+  Cache-Control: max-age=31536000, public
+/*.js
+  Cache-Control: max-age=31536000, public
+
+/*
+Set-Cookie: SameSite=None
+Set-Cookie: Secure

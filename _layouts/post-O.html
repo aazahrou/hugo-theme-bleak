@@ -1,0 +1,126 @@
+---
+layout: default
+current: post
+class: post-template
+disqus: true
+---
+
+<!-- default -->
+
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full {{ page.subclass }} {% unless page.cover %}no-image{% endunless %}">
+
+            <header class="post-full-header">
+                <h1 class="post-full-title">{{ page.title }}</h1>
+                {% include adsense-atf.html %}
+            </header>
+            
+            {% if page.cover %}
+            <figure class="post-full-image" style="background-image: url({{ page.cloudinary }})">
+            </figure> 
+            {% endif %}
+            <section class="post-full-content">
+                    <section class="post-full-meta">
+                            <!-- <span class="date-divider">Published:</span><time class="post-full-meta-date" datetime="{{ page.date | date:'%e %B %Y' }}">{{ page.date | date:'%e %B %Y' }}</time> -->
+                            <!-- {% if page.tags.size > 0 %} -->
+                            <span class="date-divider">Prep:</span><span class="post-full-meta-date">{{ page.recipe.prep }}</span>
+                            <span class="date-divider">Cook:</span> <span class="post-full-meta-date">{{ page.recipe.cook }}</span> 
+                            <span class="date-divider">Serve:</span> <span class="post-full-meta-date">{{ page.recipe.servings }}</span> 
+                            <!-- <span class="date-divider">Size:</span> <span class="post-full-meta-date">{{ page.recipe.serving_size }}</span> -->
+                                <!-- {% for tag in page.tags %}
+                                    {% if forloop.index == page.tags.size %}
+                                       <a href='{{ site.baseurl }}tag/{{ tag | downcase | replace: ' ', '-' }}/'>{{ tag | upcase }}</a>
+                                    {% else %}
+                                       <a href='{{ site.baseurl }}tag/{{ tag | downcase | replace: ' ', '-' }}/'>{{ tag | upcase }}</a> <span class="date-divider">-</span>
+                                    {% endif %}
+                                {% endfor %} -->
+                            {% endif %}
+                        </section>
+                <div class="kg-card-markdown">
+                    {{ content }}
+                    <h2>I- Ingredients</h2>
+                        {{ page.recipe.ingredients_markdown | markdownify }}
+                        {% include adsense-atf.html %}
+                    <h2>II- Directions</h2>
+                        {{ page.recipe.directions_markdown | markdownify }}
+                <!-- Email subscribe form -->
+                {% if site.subscribers %}
+                    <section class="subscribe-form">
+                        <p><b>Want to Eat Tasty and Healthy?</b></p>
+                        <p>Recipes delivered right to your inbox!</p>
+                        {% include subscribe-form.html placeholder="myemail@provider.com" %}
+                    </section>
+                {% endif %}
+                    <h2>III- Nutrition Facts</h2> 
+                    <h3 class="#">Serving Size: {{ page.recipe.serving_size }}</h3> 
+                        {{ page.recipe.nutritions_markdown | markdownify }}
+                {% include adsense-foot.html %}
+                        <div class="addthis_inline_share_toolbox"><h4>Share the recipe:</h4></div>
+            
+                </div>
+            </section>
+            <h2 class="related-posts-card">3 More healthy recipes you'll Like:</h2>
+            {% include related-3posts-card.html %}
+
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                {% for author in site.data.authors %}
+                    {% if author[1].username == page.author %}
+                        <section class="author-card">
+                            {% if author[1].picture %}
+                                <img class="author-profile-image" src="{{ site.baseurl }}{{ author[1].picture }}" alt="{{ page.author }}" />
+                            {% endif %}
+                            <section class="author-card-content">
+                                <h4 class="author-card-name"><a href="{{ site.baseurl }}author/{{ page.author }}">{{ author[1].name }}</a></h4>
+                                {% if author[1].bio %}
+                                    <p>{{ author[1].bio }}</p>
+                                {% else %}
+                                    <p>Read <a href="{{ site.baseurl }}author/{{ page.author }}">more posts</a> by this author.</p>
+                                {% endif %}
+                            </section>
+                        </section>
+                        <div class="post-full-footer-right">
+                            <a class="author-card-button" href="{{ site.baseurl }}author/{{ page.author }}">Read More</a>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+                <!-- /author  -->
+            </footer>
+
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            {% if site.disqus or page.disqus %}
+                <section class="post-full-comments">
+                    <div id="disqus_thread"></div>
+                    <script>
+                        var disqus_config = function () {
+                            this.page.url = '{{ site.url }}{{ site.baseurl }}';
+                            this.page.identifier = '{{ site.title }}';
+                        };
+                        (function() {
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://{{ site.disqus_shortname }}.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                </section>
+            {% endif %}
+
+        </article>
+    </div>
+</main>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+{% include floating-header.html %}
+{% include addthis.html %}

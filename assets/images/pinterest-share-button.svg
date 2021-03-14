@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="200"
+   height="41"
+   viewBox="0 0 52.916665 10.847917"
+   version="1.1"
+   id="svg938"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="pinterest-share-button.svg">
+  <defs
+     id="defs932" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="124.07769"
+     inkscape:cy="25.448155"
+     inkscape:document-units="px"
+     inkscape:current-layer="g487"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1366"
+     inkscape:window-height="692"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata935">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-286.15207)">
+    <g
+       id="g487"
+       transform="matrix(0.59506532,0,0,0.59506532,-60.360986,177.93183)">
+      <g
+         id="g1507"
+         transform="translate(0.0797027)">
+        <g
+           transform="matrix(0.26410993,0,0,0.26458333,123.25091,122.94008)"
+           id="g251">
+          <path
+             style="fill:#cc2330;fill-opacity:1"
+             inkscape:connector-curvature="0"
+             class="st0"
+             d="M 248.9,291.6 H -78 c -2.7,0 -4.9,-2.2 -4.9,-4.9 v -59.1 c 0,-2.7 2.2,-4.9 4.9,-4.9 h 326.9 c 2.7,0 4.9,2.2 4.9,4.9 v 59.1 c -0.1,2.7 -2.2,4.9 -4.9,4.9 z"
+             id="path209" />
+        </g>
+        <g
+           id="g458"
+           transform="translate(1.6845854,6.5401747e-6)">
+          <path
+             style="fill:#ffffff;stroke-width:0.26458332"
+             inkscape:connector-curvature="0"
+             d="m 110.52814,185.97457 c -2.73077,0 -4.10739,1.95739 -4.10739,3.59066 0,0.98849 0.37412,1.86822 1.17713,2.19551 0.13176,0.0542 0.2495,0.001 0.2876,-0.14419 0.0265,-0.10028 0.0894,-0.35534 0.11747,-0.46117 0.0384,-0.1442 0.0236,-0.19394 -0.0828,-0.32015 -0.23151,-0.27305 -0.37994,-0.62627 -0.37994,-1.12686 0,-1.45203 1.08664,-2.75246 2.82972,-2.75246 1.54358,0 2.39183,0.94351 2.39183,2.20186 0,1.65788 -0.73343,3.05621 -1.82219,3.05621 -0.60113,0 -1.05119,-0.49716 -0.90725,-1.10755 0.17251,-0.72813 0.50773,-1.51342 0.50773,-2.03941 0,-0.47016 -0.25294,-0.86254 -0.77549,-0.86254 -0.61463,0 -1.10834,0.63579 -1.10834,1.48749 0,0.54292 0.18336,0.91016 0.18336,0.91016 0,0 -0.62892,2.66462 -0.73925,3.13161 -0.21934,0.92975 -0.0331,2.06851 -0.0169,2.18308 0.009,0.0685 0.0968,0.0852 0.13679,0.0344 0.0566,-0.0746 0.78898,-0.9779 1.03716,-1.88172 0.0707,-0.25532 0.40429,-1.5793 0.40429,-1.5793 0.19976,0.38074 0.78369,0.71596 1.40414,0.71596 1.84732,0 3.10092,-1.68407 3.10092,-3.93858 0,-1.70577 -1.44436,-3.29301 -3.63855,-3.29301 z"
+             id="path253" />
+          <text
+             id="text314"
+             y="193.67685"
+             x="118.9735"
+             style="font-style:normal;font-weight:normal;font-size:7.34467936px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.18361698"
+             xml:space="preserve"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Lato;-inkscape-font-specification:'Lato Bold';fill:#ffffff;stroke-width:0.18361698"
+               y="193.67685"
+               x="118.9735"
+               id="tspan312"
+               sodipodi:role="line">Share on Pinterest</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

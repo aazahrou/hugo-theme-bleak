@@ -1,0 +1,18 @@
+<script>
+  function logElementEvent(eventName, element) {
+    console.log(Date.now(), eventName, element.getAttribute('data-bg'));
+  }
+  LL = new LazyLoad({
+    elements_selector: "div",
+    callback_enter: function (element) {
+      logElementEvent("ENTERED", element);
+    },
+    callback_set: function (element) {
+      logElementEvent("SET", element);
+    },
+    callback_error: function (element) {
+      logElementEvent("ERROR", element);
+      element.src = "https://res.cloudinary.com/wws/image/upload/v1547338550/images/lazyload.jpg";
+    }
+  });
+</script>
